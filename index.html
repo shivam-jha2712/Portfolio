@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
         integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
 </head>
 
 <body>
@@ -43,17 +44,32 @@
             <div class="text-center">
                 <div class="content">
                     <div class="loader">
-                        <span style="--i:1;">S</span>
-                        <span style="--i:2;">H</span>
-                        <span style="--i:3;">I</span>
-                        <span style="--i:4;">V</span>
-                        <span style="--i:5;">A</span>
-                        <span style="--i:6;">M</span>
-                        <span style="--i:7;">_</span>
-                        <span style="--i:8;">J</span>
-                        <span style="--i:9;">H</span>
-                        <span style="--i:10;">A</span>
+                        <a href="#">
+                            <span style="--i:1;">S</span>
+                            <span style="--i:2;">H</span>
+                            <span style="--i:3;">I</span>
+                            <span style="--i:4;">V</span>
+                            <span style="--i:5;">A</span>
+                            <span style="--i:6;">M</span>
+                            <span style="--i:7;">_</span>
+                            <span style="--i:8;">J</span>
+                            <span style="--i:9;">H</span>
+                            <span style="--i:10;">A</span>
+                        </a>
+                        <audio id="beep" preload="auto">
+                            <source src="audio/beep.mp3">
+                            </source>
+                        </audio>
                     </div>
+                    <script>
+
+                        var beepOne = $("#beep")[0];
+                        $(".loader")
+                            .mouseenter(function () {
+                                beepOne.play();
+                            });
+
+                    </script>
                 </div>
             </div>
             <div>
