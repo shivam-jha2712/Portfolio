@@ -131,8 +131,44 @@ body{
     color: var(--clr); 
     filter: drop-shadow(0 0 20px var(--clr)) drop-shadow(0 0 40px var(--clr)) drop-shadow(0 0 60px var(--clr));
 }
+
+section{
+  width: 100%;
+  display: flex;
+  display:auto;
+  flex-direction: column;
+  align-items: center;
+}
+
+section:nth-child(2n){
+  background-color: lightgrey;
+}
+section:nth-child(2n+1){
+  background-color: #fff;
+}
+
+.section-heading{
+  width:auto;
+  padding : 20px 10px 10px;
+  margin: 10px auto;
+  font-weight: 400;
+}
+
+.section-heading span{
+  font-size: 40px;
+  color: #FD0000;
+  display: inline-block;
+  padding-top: 10px;
+  margin-right: 0.5rem;
+}
+
+
+
+
+/* About */
+
 #about{
-  height: auto;
+  height: 60vh;
   width: 100%;
   position: relative;
 }
@@ -159,3 +195,11 @@ body{
   margin-top: 5vh;
 }
 
+/* Skills Section  */
+
+.skills-display{
+  width: 70%;
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
