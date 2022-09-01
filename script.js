@@ -34,3 +34,9 @@ function typewriter() {
 
 
 typewriter();
+
+var beepOne = $("#beep")[0];
+$(".loader")
+    .mouseenter(function () {
+        beepOne.play();
+    });
