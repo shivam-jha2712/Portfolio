@@ -52,8 +52,8 @@ function closePopup() {
 }
 
 //Get Data
-const firstNameInput = document.querySelector("#firstname");
-const lastNameInput = document.querySelector("#lastname");
-const emailInput = document.querySelector("#email");
-const mobileInput = document.querySelector("#mobile");
-const messageInput = document.querySelector("#message"); 
+// const firstNameInput = document.querySelector("#firstname");
+// const lastNameInput = document.querySelector("#lastname");
+// const emailInput = document.querySelector("#email");
+// const mobileInput = document.querySelector("#mobile");
+// const messageInput = document.querySelector("#message"); 
