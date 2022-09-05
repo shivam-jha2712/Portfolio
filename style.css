@@ -950,7 +950,7 @@ section:nth-child(2n+1){
 
 .open-popup{
   visibility: visible;
-  top: -100%;
+  top: -10%;
   transform: translate(-50%, -50%)scale(1);
   z-index: 10;
 }
