@@ -36,11 +36,11 @@ function typewriter() {
 
 typewriter();
 
-var beepOne = $("#beep")[0];
-$(".loader")
-    .mouseenter(function () {
-        beepOne.play();
-    });
+// var beepOne = $("#beep")[0];
+// $(".loader")
+//     .mouseenter(function () {
+//         beepOne.play();
+//     });
 
 //POPUP EVENT
 let popup = document.getElementById("popup");
