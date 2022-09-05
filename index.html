@@ -373,11 +373,13 @@
             </h1>
             <div class="contact-container">
                 <h2>Contact Form</h2>
-                <form onsubmit="event.preventDefault(); validateForm()">
+                <form action="https://formspree.io/f/mgeqoaya" method="POST">
+                    <!-- <form action="connect.php" method="POST"> -->
+                    <!-- <input type="hidden" name="_subject" value="New email"> -->
                     <div class="row100">
                         <div class="col">
                             <div class="inputBox">
-                                <input type="text" id="firstName" required="required">
+                                <input type="text" name="firstName" id="firstName" required="required">
                                 <span class="text">First Name</span>
                                 <span class="line"></span>
                                 <small class="error"></small>
@@ -385,7 +387,7 @@
                         </div>
                         <div class="col">
                             <div class="inputBox">
-                                <input type="text" id="lastName" required="required">
+                                <input type="text" id="lastName" name="lastName" required="required">
                                 <span class="text">Last Name</span>
                                 <span class="line"></span>
                                 <small class="error"></small>
@@ -395,7 +397,7 @@
                     <div class="row100">
                         <div class="col">
                             <div class="inputBox">
-                                <input type="text" id="email" required="required">
+                                <input type="text" id="email" name="email" required="required">
                                 <span class="text">Email</span>
                                 <span class="line"></span>
                                 <small class="error"></small>
@@ -403,7 +405,7 @@
                         </div>
                         <div class="col">
                             <div class="inputBox">
-                                <input type="text" id="mobile" required="required">
+                                <input type="text" id="mobile" name="mobile" required="required">
                                 <span class="text">Mobile</span>
                                 <span class="line"></span>
                                 <small class="error"></small>
@@ -414,7 +416,7 @@
                         <div class="col">
                             <!-- <label for="Message">Message:</label> -->
                             <div class="inputBox textarea">
-                                <textarea id="message" required="required"></textarea>
+                                <textarea id="message" required="required" name="textarea"></textarea>
                                 <span class="text">
                                     Type Your Text Here...
                                 </span>
