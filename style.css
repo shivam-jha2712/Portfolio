@@ -2,6 +2,7 @@ body{
     margin: 0px;
     font-family: sans-serif;
     font-size: 30px;
+    overflow-x: hidden;
 } 
 
 html{
@@ -781,7 +782,7 @@ section:nth-child(2n+1){
   height: 300px;
   background: linear-gradient(#af1313,#1a4466);
   border-radius: 50%;
-  transform: translate(500px,185px);
+  transform: translate(500px,215px);
 }
 
 .contact-container{
@@ -868,7 +869,9 @@ section:nth-child(2n+1){
 }
 
 .contact-container .row100 .col .inputBox input:focus + .text,
-.contact-container .row100 .col .inputBox textarea:focus + .text{
+.contact-container .row100 .col .inputBox input:valid + .text,
+.contact-container .row100 .col .inputBox textarea:focus + .text,
+.contact-container .row100 .col .inputBox textarea:valid + .text{
   top: -35px;
   left: -10px;
 }
@@ -877,7 +880,120 @@ section:nth-child(2n+1){
   position: absolute;
   bottom: 0;
   display: block;
-  width: 100%;
+  width: 95%;
   height: 2px;
   background : #fff;
+  transition: 0.5s;
+  border-radius: 2px;
+  pointer-events: none;
+}
+
+.contact-container .row100 .col .inputBox input:focus ~ .line,
+.contact-container .row100 .col .inputBox input:valid ~ .line{
+  height: 100%;
+}
+
+.contact-container .row100 .col .inputBox .textarea {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 10px 0;
+}
+
+.contact-container .row100 .col .inputBox textarea:focus ~ .line,
+.contact-container .row100 .col .inputBox textarea:valid ~ .line{
+  height: 100%;
+}
+
+.contact-container .row100 .col input[type="submit"]{
+  border: none;
+  padding : 10px 40px;
+  cursor: pointer;
+  outline: none;
+  background : #fff;
+  color : #000;
+  font-weight : 600;
+  font-size : 18px;
+  border-radius: 3px;
+  justify-content : center;
+  align-items : center;
+}
+
+.popup{
+  width : 400px;
+  min-height : 250px;
+  background : #fff;
+  border-radius: 16px;
+  position: absolute;
+  top : 0;
+  left : 50%;
+  transform: translate(-50%, -50%)scale(0.1);
+  text-align: center;
+  justify-content: center;
+  /* font-size: 12px; */
+  padding: auto;
+  color: #333;
+  visibility: hidden;
+  transition: transform 0.4s, top 0.4s;
+}
+
+.popup h2{
+  color: #333;
+  font-size: 27px;
+  font-weight: 500;
+}
+.popup p{
+  color: #333;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.open-popup{
+  visibility: visible;
+  top: -100%;
+  transform: translate(-50%, -50%)scale(1);
+  z-index: 10;
+}
+
+.popup img{
+  width: 100px;
+  margin-top: -50px;
+  border-radius: 50%;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.popup button{
+  width: 80%;
+  margin: auto;
+  /* margin-top: -9vh; */
+  padding: 7px;
+  background : #b32d2d;
+  color : #fff;
+  border: 0;
+  outline: 0;
+  font-size: 18px;
+  border-radius:7px;
+  cursor: pointer;
+  box-shadow: 0 5px 5px rgba(0,0,0,.2);
+}
+
+
+@media (max-width: 768px){
+
+  #contact::before
+  {
+    transform: translate(-200px,-180px);
+  }
+  #contact::after
+  {
+    transform: translate(-200px,-180px);
+  }
+  .contact-container
+  {
+    padding : 20px;
+  }
+  .contact-container h2
+  {
+    font-size :28px;
+  }
 }

@@ -41,3 +41,19 @@ $(".loader")
     .mouseenter(function () {
         beepOne.play();
     });
+
+//POPUP EVENT
+let popup = document.getElementById("popup");
+function openPopup() {
+    popup.classList.add("open-popup");
+}
+function closePopup() {
+    popup.classList.remove("open-popup");
+}
+
+//Get Data
+const firstNameInput = document.querySelector("#firstname");
+const lastNameInput = document.querySelector("#lastname");
+const emailInput = document.querySelector("#email");
+const mobileInput = document.querySelector("#mobile");
+const messageInput = document.querySelector("#message"); 

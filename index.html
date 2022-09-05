@@ -373,59 +373,75 @@
             </h1>
             <div class="contact-container">
                 <h2>Contact Form</h2>
+                <form onsubmit="event.preventDefault(); validateForm()">
+                    <div class="row100">
+                        <div class="col">
+                            <div class="inputBox">
+                                <input type="text" id="firstName" required="required">
+                                <span class="text">First Name</span>
+                                <span class="line"></span>
+                                <small class="error"></small>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="inputBox">
+                                <input type="text" id="lastName" required="required">
+                                <span class="text">Last Name</span>
+                                <span class="line"></span>
+                                <small class="error"></small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row100">
+                        <div class="col">
+                            <div class="inputBox">
+                                <input type="text" id="email" required="required">
+                                <span class="text">Email</span>
+                                <span class="line"></span>
+                                <small class="error"></small>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="inputBox">
+                                <input type="text" id="mobile" required="required">
+                                <span class="text">Mobile</span>
+                                <span class="line"></span>
+                                <small class="error"></small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row100">
+                        <div class="col">
+                            <!-- <label for="Message">Message:</label> -->
+                            <div class="inputBox textarea">
+                                <textarea id="message" required="required"></textarea>
+                                <span class="text">
+                                    Type Your Text Here...
+                                </span>
+                                <span class="line"></span>
+                                <small class="error"></small>
+                            </div>
+                        </div>
+                    </div>
 
-                <div class="row100">
-                    <div class="col">
-                        <div class="inputBox">
-                            <input type="text" name="" required="required">
-                            <span class="text">First Name</span>
-                            <span class="line"></span>
+                    <div class="row100">
+                        <div class="col">
+                            <input type="submit" value="Send" onclick="openPopup()">
+                            <p id="success"></p>
+                            <div class="popup" id="popup">
+                                <img src="images/tick3.png">
+                                <h2>Thank You!</h2>
+                                <p>Your message has been sent successfully. Thanks!</p>
+                                <button type="button" id="ok" onclick="closePopup()">OK</button>
+                            </div>
                         </div>
                     </div>
-                    <div class="col">
-                        <div class="inputBox">
-                            <input type="text" name="" required="required">
-                            <span class="text">Last Name</span>
-                            <span class="line"></span>
-                        </div>
-                    </div>
-                </div>
-                <div class="row100">
-                    <div class="col">
-                        <div class="inputBox">
-                            <input type="text" name="" required="required">
-                            <span class="text">Email</span>
-                            <span class="line"></span>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="inputBox">
-                            <input type="text" name="" required="required">
-                            <span class="text">Mobile</span>
-                            <span class="line"></span>
-                        </div>
-                    </div>
-                </div>
-                <div class="row100">
-                    <div class="col">
-                        <div class="inputBox textarea">
-                            <textarea required="required"></textarea>
-                            <span class="text">
-                                Type Your Text Here...
-                            </span>
-                            <span class="line"></span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="row100">
-                    <div class="col">
-                        <input type="submit" value="Send">
-                    </div>
-                </div>
+                </form>
             </div>
         </section>
     </main>
+    <!-- <script src="https://smtpjs.com/v3/smtp.js">
+    </script> -->
     <script src="script.js"></script>
 </body>
 
