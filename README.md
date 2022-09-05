@@ -1,2 +1,2 @@
 # Portfolio
-https://shivam-portfolio-2712.netlify.app/
+https://shivam-2712.netlify.app/
