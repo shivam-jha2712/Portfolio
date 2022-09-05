@@ -45,6 +45,17 @@ typewriter();
 //POPUP EVENT
 let popup = document.getElementById("popup");
 function openPopup() {
+    // function required() {
+    //     var empt = document.forms["form1"]["lastName"]["email"]["mobile"]["textarea"].value;
+    //     if (empt == "") {
+    //         alert("Please input a Value");
+    //         return false;
+    //     }
+    //     else {
+
+    //         return true;
+    //     }
+    // }
     popup.classList.add("open-popup");
 }
 function closePopup() {
